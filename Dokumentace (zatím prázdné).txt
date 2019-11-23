@@ -1,0 +1,28 @@
+# Domácí úkol 1 - zobrazení
+
+## Zadání
+Vypiště souřadnice rovnoběžek a poledníků pro zadané tečné válcové zobrazení
+
+## Řešení
+
+### Vstupy
+Pro tento úkol je zapotřebí importovat module "math"
+
+Jako vstupní hodnoty je potřeba zadat správné písmeno pro jedno ze čtyř podporovaných
+zobrazení ("L" pro Lambertovo,"A" pro Marinovo,"M" pro Mercatorovo,"B" pro Braunovo).
+Dále je zapotřebí zadat nezáporné nenulové měřítkové číslo.V poslední řadě lze také
+zadat vlastní poloměr Země. Pokud uživatel chce pro výpočty využít původní poloměr 
+země (6731,11 km), může zadat hodnotu "0".
+
+### Ošetření nesprávného zadání
+
+Uživatel bude upozorněn na nesprávné zadání zobrazení. Dále bude uporozněn na chybné
+zadání při nulovém nebo záporném měřítkovém číslu a záporném poloměru Země.
+
+### Vytvoření seznamu poledníků
+
+Jsou vytvořeny dva seznamy pomocí for-cyklů. První je pro záporné hodnoty, tedy pro poledníky od nulového poledníku směrem na východ. Druhý je pro rovník a kladné hodnoty, tedy pro poledníky směrem na západ. Každý ze čtyř nabízených zobrazení promítá poledníky stejně, proto není potřeba cykly upravovat pro jednotlivá zobrazení. U výsledných hodnot souřadnic větších než 1 m je místo hodnoty vypsáno "-". Seznamy jsou poté slouženy do jednoho seznamu, který udává v souřadnice poledníků od západu k východu.
+
+### Vytvoření seznamu rovnoběžek
+
+Pro seznam rovnoběžek je seznam upraven na základě uživatelem zvoleného zobrazení. Jinak je seznam vytvořen stejným způsobem, jaký byl popsán v předešlé části. 
